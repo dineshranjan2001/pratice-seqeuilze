@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "Node Api using Sequelize ORM",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon -r dotenv/config --experimental-json-modules src/index.js"
   },
   "author": "Dinesh Ranjan Biswal",
   "license": "ISC",
@@ -15,5 +17,8 @@
     "mysql2": "^3.9.1",
     "path": "^0.12.7",
     "sequelize": "^6.36.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
   }
 }
