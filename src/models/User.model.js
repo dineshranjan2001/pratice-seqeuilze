@@ -1,5 +1,6 @@
 import { databaseConnectionConfig as sequelize } from "../configs/Database.config.js";
 import {DataTypes } from "sequelize";
+import { Address } from "./Address.model.js";
 const User = sequelize.define(
   "User",
   {
@@ -38,6 +39,9 @@ const User = sequelize.define(
             msg:"Please give valid phone number!!!"
         }
     },
+    avatar:{
+        type:DataTypes.STRING
+    },
     isActive:{
         type:DataTypes.BOOLEAN,
         defaultValue:true
@@ -45,5 +49,8 @@ const User = sequelize.define(
   },
   { tableName: "users", timestamps: true }
 );
+
+User.hasMany(Address);
+Address.belongsTo(User);
 
 export{User}
