@@ -1,0 +1,19 @@
+{
+  "name": "com.sequelize",
+  "version": "1.0.0",
+  "description": "Node Api using Sequelize ORM",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dinesh Ranjan Biswal",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.1",
+    "express": "^4.18.2",
+    "fs": "^0.0.1-security",
+    "mysql2": "^3.9.1",
+    "path": "^0.12.7",
+    "sequelize": "^6.36.0"
+  }
+}
