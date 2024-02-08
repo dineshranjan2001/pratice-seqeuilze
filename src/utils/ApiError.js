@@ -1,11 +1,10 @@
-class ApiResponse{
-    constructor(success,statusCode,message,data,timestamps){
+class ApiError{
+    constructor(success,statusCode,message,timestamps){
         this.success=success;
         this.statusCode=statusCode;
         this.message=message;
-        this.data=data;
         this.timestamps=timestamps;
     }
 }
 
-export {ApiResponse}
+export {ApiError}

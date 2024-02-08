@@ -5,8 +5,9 @@ const Address = sequelize.define(
   "Address",
   {
     id: {
-      type: DataTypes.UUIDV4,
+      type: DataTypes.UUID,
       primaryKey: true,
+      defaultValue:DataTypes.UUIDV4
     },
     city: {
       type: DataTypes.STRING,

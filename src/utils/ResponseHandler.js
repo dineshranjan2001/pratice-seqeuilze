@@ -1,6 +1,6 @@
 import {ApiResponse} from "./ApiResponse.js"
 import { HTTPSTATUS, MESSAGE, STATUS } from "./Constant.js"
-class ResponseHandler{
+export class ResponseHandler{
     static async successHandler(response,data){
         const apiResponse=new ApiResponse(STATUS.SUCCESS,HTTPSTATUS.OK,MESSAGE.SAVED,data,new Date().toISOString());
         response.status(HTTPSTATUS.OK).json(apiResponse);
@@ -18,4 +18,4 @@ class ResponseHandler{
 }
 
 
-export {ResponseHandler}
+export const {successHandler,updateHandler,deleteHandler}=ResponseHandler;

@@ -5,8 +5,9 @@ const User = sequelize.define(
   "User",
   {
     id:{
-        type:DataTypes.UUIDV4,
-        primaryKey:true
+        type:DataTypes.UUID,
+        primaryKey:true,
+        defaultValue:DataTypes.UUIDV4
     },
     firstname:{
         type:DataTypes.STRING,
@@ -34,6 +35,7 @@ const User = sequelize.define(
     },
     phonenumber:{
         type:DataTypes.STRING,
+        allowNull:false,
         validate:{
             is:/^[\\d]{10}$/,
             msg:"Please give valid phone number!!!"

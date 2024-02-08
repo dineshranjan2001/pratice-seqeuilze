@@ -2,7 +2,7 @@ import { Sequelize } from "sequelize";
 
 const databaseConfig={
     host:process.env.HOST,
-    username:process.env.USERNAME,
+    username:process.env.USER_NAME,
     password:process.env.PASSWORD,
     database:process.env.DATABASE,
     dialect:process.env.DIALECT
@@ -12,6 +12,8 @@ const databaseConnectionConfig=new Sequelize(databaseConfig.database,databaseCon
     host:databaseConfig.host,
     dialect:databaseConfig.dialect
 });
+
+console.log(databaseConfig);
 
 // database connection,authenitication and sync
 (async ()=>{
