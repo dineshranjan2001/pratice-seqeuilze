@@ -12,34 +12,34 @@ const User = sequelize.define(
     firstname:{
         type:DataTypes.STRING,
         allowNull:false,
-        validate:{
-            is:/^[a-zA-Z\s]+$/,
-            msg:'Please give valid firstname!!!'
-        }
+        // validate:{
+        //     is:/^[a-zA-Z\s]+$/,
+        //     msg:'Please give valid firstname!!!'
+        // }
     },
     lastname:{
         type:DataTypes.STRING,
         allowNull:false,
-        validate:{
-            is:/^[a-zA-Z]+$/,
-            msg:'Please give valid lastname!!!'
-        }
+        // validate:{
+        //     is:/^[a-zA-Z]+$/,
+        //     msg:'Please give valid lastname!!!'
+        // }
     },
     email:{
         type:DataTypes.STRING,
         allowNull:false,
         unique:true,
-        validate:{
-            isEmail:"Please give valid email"
-        }
+        // validate:{
+        //     isEmail:"Please give valid email"
+        // }
     },
     phonenumber:{
         type:DataTypes.STRING,
         allowNull:false,
-        validate:{
-            is:/^[\\d]{10}$/,
-            msg:"Please give valid phone number!!!"
-        }
+        // validate:{
+        //     is:/^[\d]{10}$/,
+        //     msg:"Please give valid phone number!!!"
+        // }
     },
     avatar:{
         type:DataTypes.STRING

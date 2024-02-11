@@ -20,10 +20,10 @@ const Address = sequelize.define(
     pinnumber: {
       type: DataTypes.STRING,
       allowNull: false,
-      validate: {
-        is: /^[\\d]{6}$/,
-        msg: "Please give valid pin number",
-      },
+      // validate: {
+      //   is: /^[\\d]{6}$/,
+      //   msg: "Please give valid pin number",
+      // },
     },
     locality: {
       type: DataTypes.STRING,

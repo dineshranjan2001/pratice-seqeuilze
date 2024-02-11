@@ -15,7 +15,12 @@ export class ResponseHandler{
         const apiResponse=new ApiResponse(STATUS.SUCCESS,HTTPSTATUS.OK,MESSAGE.DELETED,{},new Date().toISOString());
         response.status(HTTPSTATUS.OK).json(apiResponse);
     }
+
+    static async successRetrivedHandler(response,data){
+        const apiResponse=new ApiResponse(STATUS.SUCCESS,HTTPSTATUS.OK,MESSAGE.RETRIVED,data,new Date().toISOString());
+        response.status(HTTPSTATUS.OK).json(apiResponse);
+    }
 }
 
 
-export const {successHandler,updateHandler,deleteHandler}=ResponseHandler;
+export const {successHandler,updateHandler,deleteHandler,successRetrivedHandler}=ResponseHandler;

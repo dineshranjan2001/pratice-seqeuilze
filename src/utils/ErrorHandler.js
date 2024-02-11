@@ -27,10 +27,20 @@ export class ErrorHandler{
         response.status(HTTPSTATUS.INTERNALSERVERERROR).json(apiError);
     }
 
+    static async UserNotFound(response){
+        const apiError=new ApiError(STATUS.FAILED,HTTPSTATUS.NOTFOUND,"User not found",new Date().toISOString());
+        response.status(HTTPSTATUS.NOTFOUND).json(apiError);
+    }
+
     static async userNotSave(response){
         const apiError=new ApiError(STATUS.FAILED,HTTPSTATUS.INTERNALSERVERERROR,"User not saved",new Date().toISOString());
         response.status(HTTPSTATUS.INTERNALSERVERERROR).json(apiError);
     }
+
+    static async InValidError(response,fieldName){
+        const apiError=new ApiError(STATUS.FAILED,HTTPSTATUS.BADREQUEST,`Invalid ${fieldName}`,new Date().toDateString());
+        response.status(HTTPSTATUS.BADREQUEST).json(apiError);
+    }
 }
 
-export const {serverError,fieldRequiredError,fieldValueMismatchError,allFieldsRequiredError,userFound,userNotSave}=ErrorHandler;
+export const {serverError,fieldRequiredError,fieldValueMismatchError,allFieldsRequiredError,userFound,UserNotFound,userNotSave,InValidError}=ErrorHandler;
