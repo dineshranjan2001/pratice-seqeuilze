@@ -29,14 +29,16 @@ const MESSAGE={
     NOTDELETED:"Data not deleted",
     DATANOTFOUND:"Data not found",
     UPDATED:"Data updated successfully",
+    DATAFOUND:"Data already exit",
     NOTUPDATED:"Data not updated",
     INTERNALSERVERERROR:"Internal Server Error",
     LOGGEDINSUCCESS:"Logged in successfully",
     INVALIDCREDENTIALS:"Invalid credentials",
     INVALID:"Please give valid data",
     SOMETHINGWRONG:"Something went wrong",
-
-
+    FILE_UPLOADED:"File uploaded successfully",
+    FILE_NOT_UPLOADED:"File not uploaded",
+    FILE_UPDATED:"File updated successfully",
 }
 
 
